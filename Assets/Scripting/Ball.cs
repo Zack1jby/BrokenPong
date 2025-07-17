@@ -3,9 +3,15 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    public enum CollisionTag
+    {
+        ScoreWall,
+        BounceWall,
+        Player
+    }
+
     [SerializeField] private float speed = 8f;
     [SerializeField] private List<string> tags;
-    [SerializeField] private string otherTag;
     private Vector2 direction;
 
     [SerializeField] private AudioSource audioSource;
@@ -30,15 +36,15 @@ public class Ball : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag(tags[0]))
+        if (other.CompareTag(tags[(int)CollisionTag.ScoreWall]))
         {
             ResetBall();
         }
-        else if (other.CompareTag(otherTag))
+        else if (other.CompareTag(tags[(int)CollisionTag.BounceWall]))
         {
             direction.y = -direction.y;
         }
-        else if (other.CompareTag("Player"))
+        else if (other.CompareTag(tags[(int)CollisionTag.Player]))
         {
             direction.x = -direction.x;
             direction.y = transform.position.y - other.transform.position.y;

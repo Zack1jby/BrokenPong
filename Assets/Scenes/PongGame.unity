@@ -2298,13 +2298,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64ad354a211088a408aff25e3ea24117, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 8
-  tags: []
-  otherTag: 
-  aS: {fileID: 0}
-  clip1: {fileID: 0}
-  clip2: {fileID: 0}
-  clip3: {fileID: 0}
+  speed: 8
+  tags:
+  - ScoreWall
+  - BounceWall
+  - Player
+  audioSource: {fileID: 0}
+  clipBouncePlayer: {fileID: 0}
+  clipBounceWall: {fileID: 0}
+  clipScore: {fileID: 0}
 --- !u!50 &1368952081
 Rigidbody2D:
   serializedVersion: 5
