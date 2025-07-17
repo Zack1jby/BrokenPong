@@ -42,16 +42,22 @@ public class Ball : MonoBehaviour
         {
             ResetBall();
             GameManager.IncrementScore(other.GetComponent<ScoreWall>().scoringPlayer);
+            audioSource.clip = clipScore;
+            audioSource.Play();
         }
         else if (other.CompareTag(tags[(int)CollisionTag.BounceWall]))
         {
             direction.y = -direction.y;
+            audioSource.clip = clipBounceWall;
+            audioSource.Play();
         }
         else if (other.CompareTag(tags[(int)CollisionTag.Player]))
         {
             direction.x = -direction.x;
             direction.y = transform.position.y - other.transform.position.y;
             direction = direction.normalized;
+            audioSource.clip = clipBouncePlayer;
+            audioSource.Play();
         }
     }
 }

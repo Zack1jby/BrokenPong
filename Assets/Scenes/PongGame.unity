@@ -2317,10 +2317,10 @@ MonoBehaviour:
   - ScoreWall
   - BounceWall
   - Player
-  audioSource: {fileID: 0}
-  clipBouncePlayer: {fileID: 0}
-  clipBounceWall: {fileID: 0}
-  clipScore: {fileID: 0}
+  audioSource: {fileID: 277591915}
+  clipBouncePlayer: {fileID: 8300000, guid: 89ac86caef9822742bf80949d63e7186, type: 3}
+  clipBounceWall: {fileID: 8300000, guid: 9c4744d1fb88f9c4d91c333d8cc1bb16, type: 3}
+  clipScore: {fileID: 8300000, guid: 60b1630540cc88449aaf70f2532ce857, type: 3}
 --- !u!50 &1368952081
 Rigidbody2D:
   serializedVersion: 5
