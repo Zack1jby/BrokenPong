@@ -28,7 +28,9 @@ public class Ball : MonoBehaviour
     {
         transform.Translate(direction * speed * Time.deltaTime);
     }
-
+    /// <summary>
+    /// Returns ball to origin, then sends it in a random direction
+    /// </summary>
     private void ResetBall()
     {
         transform.position = Vector2.zero;

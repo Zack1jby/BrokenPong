@@ -16,7 +16,10 @@ public class GameManager : MonoBehaviour
         }
         instance = this;
     }
-
+    /// <summary>
+    /// Increase a player's score by one, then updated the displayed score
+    /// </summary>
+    /// <param name="playerType">The player who's score is being increased</param>
     public static void IncrementScore(PlayerType playerType)
     {
         if (instance == null)
