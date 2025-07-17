@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public enum PlayerType
 {
-    Player1, Player2
+    Player1,
+    Player2
 }
 
 public class Paddle : MonoBehaviour
